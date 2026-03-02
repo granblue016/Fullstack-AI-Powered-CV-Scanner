@@ -1,0 +1,39 @@
+# Rust Build Output
+/target
+*.exe
+*.dll
+*.so
+*.dylib
+Cargo.lock
+**/.cargo/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+*.env
+
+# Secrets & Keys
+*.pem
+*.key
+*.cert
+*.p12
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.temp
+

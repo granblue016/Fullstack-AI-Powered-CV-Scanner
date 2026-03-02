@@ -1,0 +1,102 @@
+---
+import '../styles/globals.css';
+import AppWrapper from '../components/AppWrapper';
+---
+
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Resume Scanner | 2026</title>
+    <meta name="description" content="AI-powered resume analysis with instant hiring insights" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-[#0A0A0A] min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-6xl">
+      <!-- Header -->
+      <header class="text-center mb-12 animate-in fade-in slide-in-from-top duration-700">
+        <div class="inline-block mb-4">
+          <div class="text-6xl mb-2">🤖</div>
+        </div>
+        <h1 class="text-5xl md:text-6xl font-bold text-white mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+          AI Resume Scanner
+        </h1>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+          Upload a CV, paste a JD, get instant AI-powered hiring insights
+        </p>
+      </header>
+
+      <!-- Main App Container -->
+      <div class="max-w-4xl mx-auto">
+        <AppWrapper client:load />
+      </div>
+
+      <!-- Footer -->
+      <footer class="mt-20 text-center text-gray-500 text-sm">
+        <p>Built with ⚡ Rust, 🤖 AI, and 🎨 Glassmorphism 2.0</p>
+        <p class="mt-2">
+          <a href="https://github.com" class="hover:text-gray-300 transition-colors">GitHub</a>
+          <span class="mx-2">•</span>
+          <a href="/api" class="hover:text-gray-300 transition-colors">API Docs</a>
+        </p>
+      </footer>
+    </div>
+
+    <style is:global>
+      @keyframes animate-in {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-in {
+        animation: animate-in 0.5s ease-out;
+      }
+
+      .fade-in {
+        animation: animate-in 0.5s ease-out;
+      }
+
+      .slide-in-from-top {
+        animation: animate-in 0.7s ease-out;
+      }
+
+      .slide-in-from-left {
+        animation: slide-in-left 0.3s ease-out;
+      }
+
+      .slide-in-from-right {
+        animation: slide-in-right 0.3s ease-out;
+      }
+
+      @keyframes slide-in-left {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slide-in-right {
+        from {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </body>
+</html>
