@@ -1,0 +1,45 @@
+# System Requirements for AI Resume Scanner
+
+## Required Software
+
+# Backend (Rust)
+- Rust 1.70+ (https://rustup.rs/)
+- Cargo (comes with Rust)
+
+# Frontend (Node.js)
+- Node.js 18+ (https://nodejs.org/)
+- npm (comes with Node.js)
+
+# Optional
+- Docker & Docker Compose (for containerized deployment)
+- Git (for version control)
+
+## Environment Variables
+
+### Backend (.env)
+```
+GEMINI_API_KEY=your-gemini-api-key-here
+PORT=3001
+RUST_LOG=info
+```
+
+### Frontend (.env)
+```
+PUBLIC_API_URL=http://localhost:3001
+```
+
+## Installation Instructions
+
+See README.md for full setup guide.
+
+## Docker Support
+
+Use Docker Compose for easy setup:
+```bash
+docker-compose up
+```
+
+This will automatically:
+- Build and run the Rust backend on port 3001
+- Build and run the Node.js frontend on port 3000
+- Set up networking between services
